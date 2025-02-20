@@ -44,12 +44,16 @@ p {
     margin: 0 auto;
 }
 
-.text--purple {
-    color: #6030b1;
+.text--blue {
+    color: #6495ED;
 }
 
 section:nth-child(even) {
     background-color: #f8f8f8;
+}
+
+.section__title {
+    margin-bottom: 20px;
 }
 
 /* NAVIGATION BAR */
@@ -77,20 +81,20 @@ nav {
 }
 
 .nav__link--anchor-primary {
-    background-color: #6030b1;
+    background-color: #6495ED;
     padding: 8 20px;
     color: white;
     transition: all 0.3s ease;
 }
 
 .nav__link--anchor-primary:hover {
-    background-color: #5d3eff;
+    background-color: #0047AB;
 }
 
 .personal__logo {
     font-size: 24px;
     font-weight: 900;
-    color: #6030b1;
+    color: #6495ED;
     margin: 0 12px;
 }
 
@@ -109,6 +113,7 @@ nav {
     max-width: 600px;
     margin: 0 auto;
     text-align: center;
+    padding-bottom: 60px;
 }
 
 .about-me__picture--mask {
@@ -149,8 +154,57 @@ nav {
     flex: 1;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .about-me__img {
     width: 100%;
+}
+
+/* TECH STACK */
+
+.language__img {
+    width: 100%;
+    max-width: 100px;
+}
+.language:hover .language__img {
+    filter: brightness(80%);
+    opacity: 0.86;
+    transform: scale(0.9);
+    transition: all 0.3s ease;
+}
+
+.language {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.language__img--wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 16px;
+}
+
+.language__list {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.language__name {
+    position: absolute;
+    bottom: 0;
+    transform: scale(0);
+    transition: all 0.3s ease;
+    font-size: 20px;
+    opacity: 0;
+}
+
+.language:hover .language__name {
+    transform: scale(1);
+    transition: all 0.3s ease;
+    opacity: 1;
 }
